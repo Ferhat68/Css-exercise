@@ -1,0 +1,191 @@
+/*General Styles*/
+main {
+  box-sizing: content-box;
+  margin: 0px;
+  padding: 0px;
+}
+
+/*Colors, renk ayarları bu bölümde*/
+
+/*Div için arkaplan rengi düzenlendi*/
+div {
+  background-color: rgb(245, 222, 195);
+  border-color: rgb(216, 126, 93);
+}
+
+/*Her kapsayıcı kutu için ayrı bir renk düzenlendi.*/
+#violett-box {
+  background-color: #6d4975;
+}
+#red-box {
+  background-color: #e3516e;
+}
+#black-box {
+  background-color: #191210;
+}
+.yellow-ovalbox {
+  background-color: #f7ec7d;
+}
+#green-trigon {
+  background-color: #51b5a9;
+}
+#yellow-trigon {
+  background-color: #fade8b;
+}
+#red-trigon {
+  background-color: #e3516e;
+}
+#white-trigon {
+  background-color: #f7f3d7;
+}
+#left-yellow-half-circle {
+  color: #eca03d;
+}
+#center-yellow-circle {
+  border-color: #eca03d;
+}
+#red-point {
+  background-color: #84271c;
+}
+#right-yellow-half-circle {
+  color: #eca03d;
+}
+
+/*Typography kullanılmadı*/
+
+/*Layout, nesnelerin yerleşim çalışması byurada yapıldı ve flex yapı kullanıldı
+Genel kapsayıcı div flex yapıda kurgulandı*/
+div {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 350px;
+  border-style: solid;
+}
+
+/*Alt kapsayıcı section lar da flex yapıda ve benzer boyutlarda tasarlandı.*/
+#violett-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 50px;
+  width: 32%;
+  height: 250px;
+  margin-left: 20px;
+}
+#red-box {
+  display: flex;
+  width: 32%;
+  height: 300px;
+  justify-content: center;
+  align-items: center;
+}
+#black-box {
+  display: flex;
+  width: 32%;
+  height: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 20px;
+}
+
+/*Sarı oval kutular, flex yapıda ve radiusla 2 köşeler yuvarlandı*/
+.yellow-ovalbox {
+  display: flex;
+  width: 80px;
+  height: 80px;
+  border-radius: 0px 0px 40px 40px;
+}
+
+/*Çok renkli daire flex wrap özelliğiyle aşağıya kaydırıldı ve radius la köşeler yuvarlandı*/
+#multicolor-circle {
+  display: flex;
+  flex-wrap: wrap;
+  border-radius: 50%;
+  width: 160px;
+  height: 160px;
+}
+
+/*Daire içindeki her ayrı renk üçgen flex yapıda oluşturuldu.Radius la gerekli noktalar yuvarlandı.*/
+#green-trigon {
+  display: flex;
+  width: 80px;
+  height: 80px;
+  border-radius: 100% 0 0 0;
+}
+#yellow-trigon {
+  display: flex;
+  width: 80px;
+  height: 80px;
+  border-radius: 0 100% 0 0;
+}
+#red-trigon {
+  display: flex;
+  width: 80px;
+  height: 80px;
+  border-radius: 0 0 100% 0;
+}
+#white-trigon {
+  display: flex;
+  width: 80px;
+  height: 80px;
+  border-radius: 0 0 0 100%;
+}
+
+/*Soldaki yarım daire oluşturulması ve merkeze eklenmesi*/
+#left-yellow-half-circle {
+  display: flex;
+  margin-right: -20px;
+  width: 70px;
+  height: 70px;
+  border: 20px solid;
+  border-radius: 50%;
+  /* Yarım daire oluşuruluyor. */
+  border-bottom-color: transparent;
+  border-left-color: transparent;
+  /* Daire döndürülerek orta daireye monte ediliyor. */
+  transform: rotate(135deg);
+}
+
+/*Merkezdeki dairenin flex yapıda oluşturulması*/
+#center-yellow-circle {
+  width: 100px;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 100%;
+  border-style: solid;
+  border-width: 20px;
+}
+
+/*Sağdaki yarım daire oluşturulması ve merkeze eklenmesi*/
+#right-yellow-half-circle {
+  margin-left: -20px;
+  width: 70px;
+  height: 70px;
+  border: 20px solid;
+  border-radius: 50%;
+  /* Yarım daire oluşuruluyor. */
+  border-bottom-color: transparent;
+  border-left-color: transparent;
+  /* Daire döndürülerek orta daireye monte ediliyor. */
+  transform: rotate(320deg);
+}
+
+/* Orta içteki kırmızı topun oluşturulması.*/
+#red-point {
+  width: 40px;
+  height: 40px;
+  border-radius: 100%;
+}
+
+/*Components and their states
+Ortadaki oval kutuya ters yönde radius ve margin uygulandı.*/
+.yellow-ovalbox:nth-of-type(2) {
+  width: 80px;
+  height: 80px;
+  border-radius: 40px 40px 0px 0px;
+  margin-bottom: 160px;
+}
